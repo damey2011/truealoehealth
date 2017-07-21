@@ -21,6 +21,11 @@ from django.contrib.sitemaps.views import sitemap
 from blogs.models import BlogPost, BlogSitemap
 from truealoehealth import views
 
+sitemaps = {
+    'blogs': BlogSitemap
+}
+
+
 urlpatterns = [
     url(r'^$', views.HomeView.as_view(), name='home'),
     url(r'^discounts/', views.DiscountView.as_view(), name='discount'),
@@ -44,5 +49,5 @@ urlpatterns = [
     url(r'^clean-9/', views.Clean9.as_view(), name='c9'),
     url(r'^clean-9-instructions/', views.C9Instructions.as_view(), name='c9-inst'),
     url(r'^admin/', admin.site.urls),
-    url(r'^sitemap\.xml$', sitemap, {'sitemaps': BlogSitemap}, name='django.contrib.sitemaps.views.sitemap')
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
