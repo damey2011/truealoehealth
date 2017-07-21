@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'feedback.apps.FeedbackConfig',
     'products.apps.ProductsConfig',
     'topproducts.apps.TopproductsConfig',
-    'blogs.apps.BlogsConfig'
+    'blogs.apps.BlogsConfig',
+    'django.contrib.sitemaps'
 ]
 
 MIDDLEWARE = [

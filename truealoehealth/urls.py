@@ -17,6 +17,8 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
+from blogs.models import BlogPost, BlogSitemap
 from truealoehealth import views
 
 urlpatterns = [
@@ -41,5 +43,6 @@ urlpatterns = [
     url(r'^forever-i-t-weight-loss/', views.FIT.as_view(), name='fit'),
     url(r'^clean-9/', views.Clean9.as_view(), name='c9'),
     url(r'^clean-9-instructions/', views.C9Instructions.as_view(), name='c9-inst'),
-    url(r'^admin/', admin.site.urls)
+    url(r'^admin/', admin.site.urls),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': BlogSitemap}, name='django.contrib.sitemaps.views.sitemap')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

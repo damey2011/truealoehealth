@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.contrib.sitemaps import Sitemap
 from django.db import models
 
 
@@ -26,6 +27,17 @@ class BlogPost(models.Model):
 
     class Meta:
         ordering = ['-timestamp']
+
+
+class BlogSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+
+    def items(self):
+        return BlogPost.objects.filter(is_draft=False)
+
+    def lastmod(self, obj):
+        return obj.pub_date
 
 
 class Comment(models.Model):
