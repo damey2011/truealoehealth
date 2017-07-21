@@ -1,5 +1,16 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="You’re on your way to discovering how YOU can dramatically improve your health and wellness. Taking a nine-day cleanse (Forever Clean 9) is your commitment toward gaining control of that healthy lifestyle you’ve always found to be so elusive.">
+    <meta name="keywords" content="aloe, aloe vera, discounts, forever living products discount, true aloe health discounts">
+    <meta property="og:title" content="Ready to Lose up to 10lbs? If so TRY THIS!">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="You’re on your way to discovering how YOU can dramatically improve your health and wellness. Taking a nine-day cleanse (Forever Clean 9) is your commitment toward gaining control of that healthy lifestyle you’ve always found to be so elusive.">
+    <meta property="og:image" content="http://truealoehealth.com//static/images/c9-1.PNG" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Clean 9 Products
 {% endblock %}

@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Check out top Forever Living Products">
+    <meta name="keywords" content="aloe, aloe vera nigeria, top forever living products, forever living products discount, true aloe health discounts">
+    <meta property="og:title" content="Top Forever Living Products">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Highly beneficial forever living products at discounted prices">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/2-Aloe-Vera-Gelly-gallery-140x95.jpg" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Forever Living Top Products
 {% endblock %}

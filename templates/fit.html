@@ -1,6 +1,18 @@
 {% extends 'aloe-4us-carousel.html' %}
+
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Need that summer body pretty quick, you can get it in no time, just try out FIT products. A simple 69-day regimen incorporating shakes, supplements and targeted exercise.">
+    <meta name="keywords" content="fit forever, aloe vera slim, aloe shed weight, natural weight shed, true aloe health nigeria">
+    <meta property="og:title" content="Transform Your Body and Lifestyle">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Need that summer body pretty quick, you can get it in no time, just try out FIT products. A simple 69-day regimen incorporating shakes, supplements and targeted exercise.">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/fit-car-1.PNG" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
-    F.I.T.
+    F.I.T. : Transform Your Body and Lifestyle
 {% endblock %}
 {% block car_bg %}bg-purple{% endblock %}
 {% block bg_clor %}bg-purple{% endblock %}

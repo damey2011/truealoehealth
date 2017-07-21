@@ -1,5 +1,16 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Face the Future with Beautiful Skin">
+    <meta name="keywords" content="aloe skin care, aloe vera skin care, skin care, forever living skin care products, true aloe health skin care">
+    <meta property="og:title" content="Forever Living Aloe Vera Skin Care">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Face the Future with Beautiful Skin">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/skin1.PNG" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Aloe Vera Skin Care
 {% endblock %}

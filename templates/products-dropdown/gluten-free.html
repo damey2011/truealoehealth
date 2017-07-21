@@ -1,5 +1,19 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Gluten is certain type of protein. Gluten is found in foods such as rye, wheat, and barley. Because most breads and cereals make use of these foods, they usually also contain gluten.">
+    <meta name="keywords" content="aloe, aloe vera gluten free products, gluten free products, forever living products gluten free, true aloe health discounts">
+    <meta property="og:title" content="Forever Living Gluten Free Products">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Gluten is certain type of protein. Gluten is found in foods such as rye, wheat, and barley. Because most breads and cereals make use of these foods, they usually also contain gluten.">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/2-Aloe-Vera-Gelly-gallery-140x95.jpg" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
+
+
 {% block title %}
     Forever Living Gluten Free Products
 {% endblock %}

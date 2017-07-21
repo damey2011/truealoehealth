@@ -1,5 +1,17 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Starting your Forever Living Products business without a Forever Living Combo Pack is like trying to fly without wings">
+    <meta name="keywords" content="aloe, aloe vera, discounts, forever living products discount, true aloe health discounts">
+    <meta property="og:title" content="Forever Living Combo Packs">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Starting your Forever Living Products business without a Forever Living Combo Pack is like trying to fly without wings">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/altida.PNG" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Forever Living Combo Packs
 {% endblock %}

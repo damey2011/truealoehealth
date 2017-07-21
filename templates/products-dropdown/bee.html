@@ -1,5 +1,16 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Purest Bee Products You will Find Anywhere!">
+    <meta name="keywords" content="aloe, aloe vera, discounts, forever living products discount, true aloe health discounts">
+    <meta property="og:title" content="Forever Living Bee Products">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Purest Bee Products You will Find Anywhere!">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/bee1.PNG" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Forever Living Bee Products
 {% endblock %}

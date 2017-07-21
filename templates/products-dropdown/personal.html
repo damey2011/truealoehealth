@@ -1,5 +1,16 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Personal Care for the whole family">
+    <meta name="keywords" content="aloe nigeria, aloe vera care, personal care, forever living products personal care, true aloe health personal care">
+    <meta property="og:title" content="Forever Living Personal Care">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Personal Care for the whole family">
+    <meta property="og:image" content="http://truealoehealth.com/media/aloe.jpg" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Forever Living Personal Care
 {% endblock %}

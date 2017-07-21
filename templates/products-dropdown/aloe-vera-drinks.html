@@ -1,5 +1,16 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Products With a Healthy Promise!: Aloe Vera Provides Benefits for the Skin, Promotes Optimal Digestive Health.. Read More">
+    <meta name="keywords" content="aloe nigeria, aloe vera nigeria, discounts, forever living products nigeria, true aloe health nigeria, true aloe health, truealoehealth">
+    <meta property="og:title" content="Forever Living Aloe Vera Drinks">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Products With a Healthy Promise!: Aloe Vera Provides Benefits for the Skin, Promotes Optimal Digestive Health.. Read More">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/drink.PNG" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Forever Living Aloe Vera Drinks
 {% endblock %}

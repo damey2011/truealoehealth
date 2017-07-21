@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Discounts
+    Discounts on Forever Living Products
+{% endblock %}
+
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Get up to 50% discounts and other benefits when purchasing Forever Living Aloe Vera Products through Truealoehealth.">
+    <meta name="keywords" content="aloe, aloe vera, discounts, forever living products discount, true aloe health discounts">
+    <meta property="og:title" content="Get Discounts on Forever Living Aloe Vera Products">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Get up to 50% discounts and other benefits when purchasing Forever Living Aloe Vera Products through Truealoehealth.">
+    <meta property="og:image" content="http://truealoehealth.com/media/aloe.jpg" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
 {% endblock %}
 
 {% block content %}

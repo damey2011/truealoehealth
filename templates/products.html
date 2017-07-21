@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Check all forever living products and which one suits you the most">
+    <meta name="keywords" content="aloe, aloe vera, products nigeria, forever living products nigeria, true aloe health nigeria">
+    <meta property="og:title" content="Forever Living Products">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Check all forever living products and which one suits you the most">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/1465838901727ComboImage.jpg" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Forever Living Products
 {% endblock %}

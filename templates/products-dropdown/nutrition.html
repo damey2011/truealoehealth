@@ -1,5 +1,16 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Products With a Healthy Promise!">
+    <meta name="keywords" content="aloe, aloe vera nutrition, nutrition, forever living products nutrition, true aloe health nutrition">
+    <meta property="og:title" content="Forever Living Nutrition">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Products With a Healthy Promise!">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/nutrition1.PNG" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Forever Living Nutrition
 {% endblock %}

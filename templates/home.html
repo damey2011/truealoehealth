@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
+
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Get up to 50% discounts and other benefits when purchasing Forever Living Aloe Vera Products through Truealoehealth.">
+    <meta name="keywords" content="aloe nigeria, aloe vera nigeria, discounts, forever living products nigeria, true aloe health nigeria, true aloe health, truealoehealth">
+    <meta property="og:title" content="Forever Living Products Nigeria">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Try Forever Living Products Today; Highest Quality Aloe Vera Products, 15-48% Discounts for Registered Members, Most Effective at Affordable Prices and many more">
+    <meta property="og:image" content="http://truealoehealth.com/media/aloe.jpg" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Natural Health & Beauty Productss
 {% endblock %}

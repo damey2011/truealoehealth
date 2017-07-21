@@ -1,4 +1,16 @@
 {% extends 'no-carousel-base.html' %}
+
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Send us a message today">
+    <meta name="keywords" content="aloe, aloe vera contact, contact truealoehealth, forever living Nigeria">
+    <meta property="og:title" content="Contact Us at True Aloe Health">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Send us a message today">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/icon-phone.png" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Contact US
 {% endblock %}

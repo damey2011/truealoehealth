@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
+
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Become a member of Forever Living and Enjoy mind blowing benefits">
+    <meta name="keywords" content="aloe, register forever living nigeria, join forever living, signup for forever living discounts, true aloe health discounts, forever living nigeria">
+    <meta property="og:title" content="Join Forever Living Today">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="Become a member of Forever Living and Enjoy mind blowing benefits">
+    <meta property="og:image" content="http://truealoehealth.com/static/images/rolf%20kipp.PNG" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     Become a distributor of Forever living Products
 {% endblock %}

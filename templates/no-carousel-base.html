@@ -15,12 +15,17 @@
 
     <link rel="stylesheet" href="{% static 'css/fontawesome/css/font-awesome.min.css' %}">
     <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="Forever Living Product Distributor">
-    <meta property="og:site_name" content="True Aloe Health">
-    <meta property="og:description" content="Distributor Forever Living Products">
-<meta property="og:image" content="/static/images/img2.jpg" />
-<meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+    {% block meta_tags %}
+        <meta name="google-site-verification" content="a_KspZ4SuQAaQHoD4U4GNeqd2ndwPe4-pSHd4v4rDjw" />
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="We are an independent health/consultant distributor of forever living Aloe Vera Products in Nigeria. Truealoehealth is owned and operated by Olaoye Oyeleke. ">
+        <meta name="keywords" content="aloe, aloe vera, aloehealth, truealoehealth, true aloe health, aloe vera benefits">
+        <meta property="og:title" content="Forever Living Aloe Vera Products Distributor">
+        <meta property="og:site_name" content="TrueAloeHealth.com">
+        <meta property="og:description" content="Distributor Forever Living Products">
+        <meta property="og:image" content="http://truealoehealth.com/media/aloe.jpg" />
+        <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+    {% endblock %}
 
     <style>
         .nav .navbar-nav .current{

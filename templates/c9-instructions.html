@@ -1,5 +1,16 @@
 {% extends 'aloe-4us-carousel.html' %}
 
+{% block meta_tags %}
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Forever Living C9 Instruction sheet">
+    <meta name="keywords" content="aloe, aloe vera c9, c9 forever, forever living products c9 instruction, true aloe health c9 instruction">
+    <meta property="og:title" content="C9 Instruction">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="C9 Instruction">
+    <meta property="og:image" content="http://truealoehealth.com/media/aloe.jpg" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block title %}
     C9 Products Instruction Sheet
 {% endblock %}

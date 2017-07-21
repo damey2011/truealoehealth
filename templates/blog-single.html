@@ -4,6 +4,18 @@
     {{ bp.title }}
 {% endblock %}
 
+{% block meta_tags %}
+    <meta name="google-site-verification" content="a_KspZ4SuQAaQHoD4U4GNeqd2ndwPe4-pSHd4v4rDjw" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ bp.content | safe | truncatewords:15 }}">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{ bp.title }} | Forever Living Product Distributor">
+    <meta property="og:site_name" content="TrueAloeHealth.com">
+    <meta property="og:description" content="{{ bp.content | safe | truncatewords:15 }}">
+    <meta property="og:image" content="http://truealoehealth.com/media/aloe.jpg" />
+    <meta property="og:url" content="{{ request.build_absolute_uri| slice:":-1" }}" />
+{% endblock %}
+
 {% block content %}
 
     {% load staticfiles %}
@@ -52,25 +64,25 @@
                                     {% if comments %}
 
                                         {% for c in comments %}
-                                        <div class="comment">
-                                            <div class="row">
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                                                    <img src="{% static 'images/user.png' %}" class="commentImg" alt="" />
-                                                </div>
-                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
-                                                    <div class="arrow-left"></div>
-                                                    <div class="commentText">
-                                                        <h1>{{ c.name }}</h1>
-                                                        <p>
-                                                            {{ c.message }}
-                                                        </p>
-                                                        <p class="commentFooter"><i class="fa fa-calendar"></i> {{ c.timestamp.date }}</p>
-                                                        {#                                                    <a href="#" class="commentFooter replyIcon"><i class="fa fa-reply"></i> REPLY</a>#}
+                                            <div class="comment">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                        <img src="{% static 'images/user.png' %}" class="commentImg" alt="" />
                                                     </div>
-                                                </div>
-                                            </div><!-- end row -->
-                                        </div><!-- end comment -->
-                                    {% endfor %}
+                                                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+                                                        <div class="arrow-left"></div>
+                                                        <div class="commentText">
+                                                            <h1>{{ c.name }}</h1>
+                                                            <p>
+                                                                {{ c.message }}
+                                                            </p>
+                                                            <p class="commentFooter"><i class="fa fa-calendar"></i> {{ c.timestamp.date }}</p>
+                                                            {#                                                    <a href="#" class="commentFooter replyIcon"><i class="fa fa-reply"></i> REPLY</a>#}
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end row -->
+                                            </div><!-- end comment -->
+                                        {% endfor %}
 
                                     {% else %}
                                         <h4>Be the first to comment </h4>
