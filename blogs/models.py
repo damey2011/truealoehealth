@@ -34,7 +34,8 @@ class BlogSitemap(Sitemap):
     priority = 1.0
 
     def items(self):
-        return BlogPost.objects.filter(is_draft=False)
+        author = User.objects.get(last_name="olaoye")
+        return BlogPost.objects.filter(author=author)
 
     def lastmod(self, obj):
         return obj.timestamp
