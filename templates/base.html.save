@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Forever Living Products{% endblock %}</title>
+    {% load staticfiles %}
+    {#    <link rel="stylesheet" href="{% static 'css' %}">#}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/yamm.css' %}">
+    <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome/css/font-awesome.min.css' %}">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width"><meta property="og:title" content="Forever Living Product Distributor">
+    <meta property="og:site_name" content="True Aloe Health">
+    <meta property="og:description" content="Distributor Forever Living Product$
+        <meta property="og:image" content="/static/images/img2.jpg" />
+
+    <meta property="og:title" content="Forever Living Product Distributor">
+    <meta property="og:site_name" content="True Aloe Health">
+    <meta property="og:description" content="Distributor Forever Living Products">
+	<meta property="og:image" content="/static/images/img2.jpg" />	
+
+    <style>
+        .navbar-brand span {
+            color: {% block sol_col %}#81be32{% endblock %};
+        }
+
+        .nav.navbar-nav.current {
+            box-shadow: inset 0 -4px 0 {% block current_col %}#81be32{% endblock %} !important;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="nav-fix">
+
+</div>
+
+<!--End of navbar-->
+
+<div class="row owner-row">
+    <div class="container">
+        <div class="media col-lg-8">
+            <div class="portfolio media-body">
+                <img src="/static/images/leke.jpg" alt="" class="pull-left media-object m-img">
+
+                <p class="media-heading">Forever Living Products Business Owner</p>
+                natural health and beauty products
+            </div>
+        </div>
+        <div class="col-lg-4 business-info">
+            JOIN NOW & SAVE 15%! It's 100% FREE! <br>
+            I can help you if you have any Question! <br>
+            Call Oyeleke at +2348032550758
+        </div>
+    </div>
+</div>
+
+
+<!-- Start Header -->
+<header class="navbar yamm navbar-default navbar-fixed-top">
+    <div class="topBar">
+        <div class="container">
+            <p class="topBarText"><img class="icon" src="/static/images/icon-phone.png" alt=""/>+2348032550758</p>
+
+            <p class="topBarText"><img class="icon" src="/static/images/icon-mail.png" alt=""/>oyelekeolaoye@gmail.com
+            </p>
+            <ul class="socialIcons">
+                <li class="topBarText"><a href="#" data-toggle="modal" data-target="#shopModal">Shop</a></li>
+                <li class="topBarText"><a href="#" data-toggle="modal" data-target="#joinModal">Join</a></li>
+                <li><a href="#"><img src="/static/images/icon-fb.png" alt=""/></a></li>
+                {#                <li><a href="#"><img src="/static/images/icon-twitter.png" alt=""/></a></li>#}
+                {#                <li><a href="#"><img src="/static/images/icon-google.png" alt=""/></a></li>#}
+                {#                <li><a href="#"><img src="/static/images/icon-rss.png" alt=""/></a></li>#}
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <!--<img src="/static/images/logoGreen.png" alt="True Health" />-->
+                TRUEHEALTH<span>SOLUTIONS</span>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+            <!--  start login/register -->
+            <ul class="userButtons">
+                <li class="userBtn"><a href="#" class="buttonGrey" data-toggle="modal" data-target="#shopModal">Shop
+                    Now</a></li>
+                <li class="userBtn"><a href="#" class="buttonGrey" data-toggle="modal" data-target="#joinModal">Join
+                    Now</a></li>
+            </ul>
+            <!-- end login/register -->
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown {{ home }}">
+                    <a href="{% url 'home' %}">HOME</a>
+                </li>
+                <li class="dropdown {{ products }} menu-item-has-children">
+                    <a href="/products">PRODUCTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'aloe' %}">Aloe Vera Drink</a></li>
+                        <li><a href="{% url 'nutrition' %}">Nutrition</a></li>
+                        <li><a href="{% url 'cosmetics' %}">Cosmetics</a></li>
+                        <li><a href="{% url 'skincare' %}">Skin Care</a></li>
+                        <li><a href="{% url 'bee_products' %}">Bee Products</a></li>
+                        <li><a href="{% url 'combo' %}">Combo Packs</a></li>
+                        <li><a href="{% url 'personal' %}">Personal Care</a></li>
+                        <li><a href="{% url 'weight' %}">Weight Management</a></li>
+                        <li><a href="{% url 'gluten' %}">Gluten Free Products</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown {{ discounts }}">
+                    <a href="/discounts">DISCOUNTS</a>
+                </li>
+                <li class="dropdown {{ become }}">
+                    <a href="/become-business-owner">BECOME A BUSINESS OWNER</a>
+                </li>
+                <li class="dropdown {{ top_prod }}">
+                    <a href="/top-products">TOP PRODUCTS</a>
+                </li>
+                <li class="dropdown {{ contact }}">
+                    <a href="/feedback">CONTACT</a>
+                </li>
+                <li class="dropdown {{ clean }} menu-item-has-children">
+                    <a href="{% url 'c9' %}">CLEAN 9</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'c9-inst' %}">C9 Instruction</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown {{ fit }}">
+                    <a href="/forever-i-t-weight-loss">FOREVER F.I.T</a>
+                </li>
+            </ul>
+        </div>
+        <!--/.navbar-collapse -->
+    </div>
+    <!-- end header container -->
+</header>
+<!-- End Header -->
+
+
+<div class="banner carousel slide" id="recommended-item-carousel" data-ride="carousel">
+    <div class="slides carousel-inner">
+        <div class="item active">
+            <img src="/static/images/forever-living-products.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="/static/images/Forever-living-review1.jpg" alt="">
+        </div>
+        <!--<div class="item">-->
+        <!--<img src="/static/images/abstract-background-8.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="item">-->
+        <!--<img src="/static/images/abstract-background-52.jpg" alt="">-->
+        <!--</div>-->
+    </div>
+{#    <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">#}
+{#        <img src="img/home/slider/prev.png">#}
+{#    </a>#}
+{#    <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">#}
+{#        <img src="img/home/slider/next.png">#}
+{#    </a>#}
+</div>
+
+<div class="container no-padding-mobile-container">
+    <br>
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+<div class="rand-topics">
+    <div class="container">
+        <hr>
+        <br>
+        <h2>Read these: </h2>
+        <div class="row">
+            {% for post in posts %}
+                <div class="col-lg-4">
+                    <a href="/blogs/{{ post.slug }}" class="hover-card hover-card-hovered">
+                        <div class="w3-card-4 test" style="width:100%; height: 350px; overflow: hidden; padding-bottom: 15px;">
+                            <header class="w3-container card-header">
+                                <img src="{% static 'images/leke.jpg' %}" alt="User" class="small-post-img img-responsive pull-right" style="margin-top: 20px; border-radius: 50%;">
+                                <h3><b>{{ post.title }}</b></h3>
+                                <small><span class="fa fa-user w3-text-white"></span> {{ post.author.first_name }} {{ post.author.last_name }}</small>
+                                <small><span class="fa fa-calendar w3-text-white"></span> {{ post.timestamp.date }}</small>
+                                <small><span class="fa fa-clock-o w3-text-white"></span> {{ post.timestamp.time }}</small>
+                                <br>
+                                <br>
+                            </header>
+                            <div class="w3-container" style="padding-bottom: 15px; line-height: 1.5 !important;">
+                                <br>
+                                <div class="post-excerpt">
+                                    {{ post.content | safe | truncatewords:50 }} ... <a href="/blogs/{{ post.slug }}" style="color: rgba(129, 190, 50, 1);">Continue Reading</a>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="int-bar">
+                                <a onclick="return popitup(this)" href="https://www.facebook.com/sharer/sharer.php?u=http://truealoehealth.com/blogs/{{ post.slug }}"><span class="fa fa-facebook-official"></span></a>
+                                <a onclick="return popitup(this)" href="https://twitter.com/intent/tweet?text=Read about {{ post.title }} at http://truealoehealth.com/blogs/{{ post.slug }}"><span class="fa fa-twitter-square"></span></a>
+                                {% if user.is_superuser %}
+
+                                    <a href="/blogs/update/{{ post.id }}"><span class="fa fa-pencil-square-o"></span></a>
+
+                                {% endif %}
+                            </div>
+                        </div>
+                    </a>
+                    <br>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+    <form action="" class="sub-form form-group {% block form_bg %}form-default{% endblock %}">
+        <span><span class="fa fa-envelope-o icon-mail"></span>  Join our mailing list for exclusive updates</span>
+        <br>
+        <br>
+        <input type="email" class="email-input form-control" placeholder="Your Email Address"/>
+        <input type="submit" value="Join" class="btn btn-default submit-btn">
+    </form>
+</div>
+
+{% include 'join-now-modal.html' %}
+{% include 'shop-now-modal.html' %}
+{% include 'img-modal.html' %}
+
+
+<footer class="custom-footer-nav {% block bg_color %}{% endblock %}">
+
+    <div class="footer-link-container">
+        <ul class="footer-link-list">
+            <li><a href="/blogs">Blogs</a></li>
+        </ul>
+    </div>
+    <hr/>
+    <br>
+
+    <div>
+        &copy; 2017 Forever Living Products Business Owner. All Rights Reserved.
+    </div>
+</footer>
+
+
+</body>
+
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.flexslider.js' %}"></script>
+<script>
+    var csrf = '{{ csrf_token }}';
+    $.getJSON('/products/categories', {'csrfmiddlewaretoken': csrf}, function (data) {
+        $.each(data, function (key, value) {
+            $('.footer-link-list').append(list_item(value));
+        })
+    });
+
+    function list_item(item) {
+        return "<li><a href='/products/category/" + item.id + "'>" + item.category + "</a></li>";
+    }
+
+    function changeLinkBg(id){
+        $('.panel-body-'+id).addClass('change-bg-link');
+    }
+
+    function revertLinkBg(id){
+        $('.panel-body-'+id).removeClass('change-bg-link');
+    }
+
+    function popitup(link) {
+        var w = window.open(link.href,
+                link.target||"_blank",
+                'menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=no,resizable=no,dependent,width=800,height=620,left=0,top=0');
+        return w?false:true; // allow the link to work if popup is blocked
+    }
+
+    function dismissImgModal(){
+        event.preventDefault();
+        $('html').css('overflow', 'auto');
+        $('.img-modal').removeClass('show');
+    }
+
+    $('img').click(function () {
+        event.preventDefault();
+{#        $('.modal-img').attr('src', window.location.origin+'/static/images/loading.gif').css('margin-top', '45%');#}
+        var url = event.target.src;
+        $('.img-modal').addClass('show').fadeIn;
+        $('.modal-img').attr('src', url).css('margin-top', '40px');
+        $('html').css('overflow', 'hidden');
+    });
+
+</script>
+</html>
