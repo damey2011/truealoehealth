@@ -30,14 +30,14 @@ class BlogPost(models.Model):
 
 
 class BlogSitemap(Sitemap):
-    changefreq = "weekly"
-    priority = 0.5
+    changefreq = "daily"
+    priority = 1.0
 
     def items(self):
         return BlogPost.objects.filter(is_draft=False)
 
     def lastmod(self, obj):
-        return obj.pub_date
+        return obj.timestamp
 
 
 class Comment(models.Model):
