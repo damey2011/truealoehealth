@@ -45,6 +45,36 @@ class BlogSitemap(Sitemap):
         return obj.timestamp
 
 
+class StaticPostsSitemap(Sitemap):
+    priority = 0.5
+    changefreq = 'daily'
+
+    def items(self):
+        return [
+            'discount',
+            'become-owner',
+            'products',
+            'feedback',
+            'top-products',
+            'blogs',
+            'aloe',
+            'nutrition',
+            'cosmetics',
+            'skincare',
+            'bee_products',
+            'combo',
+            'personal',
+            'weight',
+            'gluten',
+            'fit',
+            'c9',
+            'c9-inst'
+        ]
+
+    def location(self, item):
+        return reverse(item)
+
+
 class Comment(models.Model):
     name = models.CharField(max_length=50)
     message = models.TextField()

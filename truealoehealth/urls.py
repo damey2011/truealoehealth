@@ -18,11 +18,12 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
-from blogs.models import BlogPost, BlogSitemap
+from blogs.models import BlogPost, BlogSitemap, StaticPostsSitemap
 from truealoehealth import views
 
 sitemaps = {
-    'blogs': BlogSitemap
+    'blogs': BlogSitemap,
+    'static': StaticPostsSitemap
 }
 
 
