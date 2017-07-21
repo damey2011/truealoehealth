@@ -5,6 +5,7 @@ from django.db import models
 
 # Create your models here.
 from django.template.defaultfilters import slugify
+from django.urls import reverse
 from products.models import ProductCategory
 
 
@@ -21,6 +22,9 @@ class BlogPost(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super(BlogPost, self).save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('blog-post', args=self.slug)
 
     def __str__(self):
         return self.title
